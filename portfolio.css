@@ -312,6 +312,7 @@ hr {
 .traduction img {
     width: 40px;
     padding: 5px;
+    cursor: pointer;
     height: 100%;
     animation: WidthIn 4s linear infinite;
 }
@@ -319,10 +320,13 @@ hr {
 .traduction img:hover {
     transform: scale(1.5);
 }
-
+.active {
+    display: inline-block;
+}
 .traduction img:active {
     transform: scale(1.2);
 }
+
 
 /*===============================header=======================================*/
 /*===============================body=======================================*/

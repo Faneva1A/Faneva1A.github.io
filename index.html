@@ -7,6 +7,7 @@
     <title>Curriculum vitae</title>
     <link rel="stylesheet" href="portfolio.css">
     <script src="portfolio.js"></script>
+    <script src="data.js"></script>
 </head>
 <body>
     <!--En tête-->
@@ -14,41 +15,41 @@
         <div class="menu_barre">
             <div id="rafan"><strong>FAN<span id="fan">EVA</strong></span></div>
             <div id="lire1" class="lire">
-                <a class="show1" href="#">Moi</a>
+                <a class="show1" href="#" id="001">Moi</a>
             </div>
             <div class="liste1">
                 <ul>
                     <hr>
-                    <div class="boutton1"><li><a href="#profill">Profil</a></li></div>
+                    <div class="boutton1"><li><a href="#profill" id="002">Profil</a></li></div>
                     <hr>
-                    <div class="boutton1"><li><a href="#contactt">Contact</a></li></div>
+                    <div class="boutton1"><li><a href="#contactt" id="003">Contact</a></li></div>
                     <hr>
                 </ul>
             </div>
             <div id="lire2" class="lire">
-                <a class="show4" href="#andrana">Qualités</a>
+                <a class="show4" href="#andrana" id="004">Qualités</a>
             </div>
             <div id="lire3" class="lire">
-                <a class="show2" href="#">Compétences</a>
+                <a class="show2" href="#" id="005">Compétences</a>
             </div>
             <div class="liste2">
                 <ul>
                     <hr>
-                    <div class="boutton1"><li><a href="#transs">Transversales</a></li></div>
+                    <div class="boutton1"><li><a href="#transs" id="006">Transversales</a></li></div>
                     <hr>
-                    <div class="boutton1"><li><a href="#transs">Techniques</a></li></div>
+                    <div class="boutton1"><li><a href="#transs" id="007">Techniques</a></li></div>
                     <hr>
                 </ul>
             </div>
             <div id="lire4" class="lire">
-                <a class="show3" href="#">Experiences</a>
+                <a class="show3" href="#" id="008">Experiences</a>
             </div>
             <div class="liste3">
                 <ul id="expe">
                     <hr>
-                    <div class="boutton1"><li><a href="#exp_titree">En tant qu'étudiant</a></li></div>
+                    <div class="boutton1"><li><a href="#exp_titree" id="009">En tant qu'étudiant</a></li></div>
                     <hr>
-                    <div class="boutton1"><li><a href="#exp_titree">En informatique</a></li></div>
+                    <div class="boutton1"><li><a href="#exp_titree" id="010">En informatique</a></li></div>
                     <hr>
                 </ul>   
             </div>
@@ -58,8 +59,8 @@
                 <div class="icon_search"><img class='search_icon' src="immg/search_500px.png"></div>
             </div>
             <div class="traduction">
-                <img src="immg/francaiss.png" alt="Français">
-                <img src="immg/anglaiss.png" alt="Anglais">
+                <img src="immg/francaiss.png" alt="Français" id="francais_icon" onclick="changeLanguage('fr')" class="active">
+                <img src="immg/anglaiss.png" alt="Anglais" id="anglais_icon" onclick="changeLanguage('en')">
             </div>
         </div>
     </header>
@@ -78,41 +79,41 @@
                         <h2>RATSARAHASIMBOLA <br>Fanevasoa Fidèle</h2>
                     </div>
                     <div class="profil_contenu">
-                        <h3>PROFIL</h3>
-                        <p>Je suis un jeune passionné par la technologie et le numérique. C'est pourquoi je souhaite devenir développeur web, un métier en constante évolution de nos jours.J'ai principalement poursuivi mon apprentissage de manière autodidacte sans encore avoir commencé d'études universitaires.</p>
+                        <h3 id="011">PROFIL</h3>
+                        <p id="111">Je suis un jeune passionné par la technologie et le numérique. C'est pourquoi je souhaite devenir développeur web, un métier en constante évolution de nos jours.J'ai principalement poursuivi mon apprentissage de manière autodidacte sans encore avoir commencé d'études universitaires.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="title1">
-            <div class="parcours"><h3>Parcours</h3></div>
+            <div class="parcours" id="012"><h3>Parcours</h3></div>
         </section>
         <section>
             <div class="parcours_éspace">
                 <div class="boite_explication">
                     <summary><div id="parcours_année">2023-2024</div></summary>
                     <br>
-                    <div class="explication">Année préparatoire<div id="sesame">PROGRAMME SESAME</div></div>
+                    <div class="explication" id="013">Année préparatoire<div id="sesame">PROGRAMME SESAME</div></div>
                 </div>
                 <div class="boite_explication">
                     <summary><div id="parcours_année">2023</div></summary>
                     <br>
-                    <div class="explication">Baccalauréat Série S <br>Mention Bien</div>
+                    <div class="explication" id="014">Baccalauréat Série S <br>Mention Bien</div>
                 </div>
                 <div class="boite_explication">
                     <summary><div id="parcours_année">2020-2023</div></summary>
                     <br>
-                    <div class="explication">Lycée Ambatolampy 104<br>3 années scolaires</div>
+                    <div class="explication" id="015">Lycée Ambatolampy 104<br>3 années scolaires</div>
                 </div>
                 <div class="boite_explication">
                     <summary><div id="parcours_année">2020</div></summary>
                     <br>
-                    <div class="explication">BEPC Option A<br>3éme rang (CISCO)</div>
+                    <div class="explication" id="017">BEPC Option A<br>3éme rang (CISCO)</div>
                 </div>
             </div>
         </section>
         <section class="title1">
-            <h3>COMPETENCES</h3>
+            <h3 id="018">COMPETENCES</h3>
         </section>
         <section class="comp" id="transs">
             <div class="tech">
@@ -189,39 +190,39 @@
             </div>
         </section>
         <section class="title1">
-            <h3>EXPERIENCES</h3>
+            <h3 id="019">EXPERIENCES</h3>
         </section>
         <section class="experience_section" id="exp_titree">
             <div class="dev">
-                <div class="en_developpement" id="exp_titre">En développement Web</div>
+                <div class="en_developpement" id="exp_titre"><h4 id="020">En développement Web</h4></div>
                 <div class="developpeur">
                     <ul>
-                        <li>Réalisation des mini-projets.</li>
-                        <li>Participation à des défis.</li>
-                        <li>Membre du club d'informatique.</li>
+                        <li id="021">Réalisation des mini-projets.</li>
+                        <li id="022">Participation à des défis.</li>
+                        <li id="023">Membre du club d'informatique.</li>
                     </ul>
                 </div>
             </div>
             <div class="etu">
-                <div class="en_tant_qu'etudiants" id="exp_titre">En tant qu'étudiants</div>
+                <div class="en_tant_qu'etudiants" id="exp_titre"><h4 id="024">En tant qu'étudiants</h4></div>
                 <div class="Etudiant">
                     <ul>
-                        <li>Chef de classe</li>
-                        <li>Chef de TD</li>
-                        <li>Répresentant de classe</li>         
+                        <li id="025">Chef de classe</li>
+                        <li id="026">Chef de TD</li>
+                        <li id="027">Répresentant de classe</li>         
                     </ul>
                 </div>
             </div>
         </section>
         <section class="title1" id="andrana">
-                <h3>Qualités</h3>
+                <h3 id="028">Qualités</h3>
         </section>
         <section class="andrana">
             <div class="qualite_tout">
-                <div class="qualite_type">Serieux</div>
-                <div class="qualite_type">Responsable</div>
-                <div class="qualite_type">Attentif</div>
-                <div class="qualite_type">Autonome</div>
+                <div class="qualite_type" id="029">Serieux</div>
+                <div class="qualite_type" id="030">Responsable</div>
+                <div class="qualite_type" id="031">Attentif</div>
+                <div class="qualite_type" id="032">Autonome</div>
             </div>
         </section>
     </main>
@@ -231,7 +232,7 @@
     <footer>
         <div class="premier_section">
             <div class="div1">
-                <h4>Langues</h4>
+                <h4 id="033">Langues</h4>
                 <div class="langues_differents">
                     <div><img src="immg/Malagasy.png" alt="" class="malagasy"><br>Malagasy</div>
                     <div><img src="immg/Français.png" alt="" class="francais"><br>Français</div>
@@ -240,19 +241,19 @@
             </div>
             <div class="div2">
                 <div>
-                    <h4>Passions</h4>
+                    <h4 id="034">Passions</h4>
                     <div class="passion_images">
                         <div>
                             <img src="immg/coder.png" alt="Coder" class="passe_temps">
-                            <figcaption>Coder</figcaption>
+                            <figcaption id="035">Coder</figcaption>
                         </div>
                         <div>
                             <img src="immg/jeux.png" alt="Jeux-Vidéos" class="passe_temps">
-                            <figcaption>Jeux-Vidéos</figcaption>
+                            <figcaption id="036">Jeux-Vidéos</figcaption>
                         </div>
                         <div>
                             <img src="immg/cinema.png" alt="film" class="passe_temps">
-                            <figcaption>Film</figcaption>
+                            <figcaption id="037">Film</figcaption>
                         </div>
                         <div>
                             <img src="immg/football.png" alt="Footbal" class="passe_temps">
@@ -260,18 +261,18 @@
                         </div>
                         <div>
                             <img src="immg/musique.png" alt="Musique" class="passe_temps">
-                            <figcaption>Musique</figcaption>
+                            <figcaption id="038">Musique</figcaption>
                         </div>
                         <div>
                             <img src="immg/piano.png" alt="Piano" class="passe_temps">
-                            <figcaption>Piano</figcaption>
+                            <figcaption id="039">Piano</figcaption>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="div3" id="contactt">
                 <div>
-                    <h4>Contactez-moi!</h4>
+                    <h4 id="040">Contactez-moi!</h4>
                     <div class="contact_type">
                         <div><img src="immg/phone.png" alt="Mon téléphone"><br>034 54 224 20</div>
                         <div><img src="immg/facebook.png" alt="Facebook"><br>Faneva Ratsarahasimbola</div>
