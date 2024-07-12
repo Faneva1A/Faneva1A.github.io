@@ -128,3 +128,27 @@ function changeLanguage(lang){
   document.getElementById('040').textContent = data[lang]["040"];
 
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const sesame = document.getElementById('sesame');
+  const sesameexp = document.querySelector('.sesame_exp');
+
+  // Fonction pour basculer l'affichage du div toggleDiv
+  function toggleDisplay() {
+      if (sesameexp.style.display === 'none') {
+          sesameexp.style.display = 'flex'; // Afficher le div
+      } else {
+          sesameexp.style.display = 'none'; // Cacher le div
+      }
+  }
+
+  // Clic sur triggerDiv pour afficher/cacher toggleDiv
+  sesame.addEventListener('click', toggleDisplay);
+
+  // Clic n'importe où sur le document pour cacher toggleDiv
+  document.addEventListener('click', function(event) {
+      if (event.target !== sesame && !sesame.contains(event.target)) {
+          sesameexp.style.display = 'none'; // Cacher le div si on clique à l'extérieur
+      }
+  });
+});

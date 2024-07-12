@@ -11,7 +11,7 @@
     }
 
     50% {
-        transform: scale(1.09);
+        transform: scale(1.05);
     }
 
     100% {
@@ -93,6 +93,7 @@ header {
     border-radius: 90px;
     display: flex;
     color: rgb(0, 0, 0);
+    transition: 0.3s ease-out;
 }
 
 .menu_barre {
@@ -171,6 +172,7 @@ header {
 
 .boutton1:hover {
     background-color: rgb(63, 114, 126);
+    transition: 0.2s ease-out;
 }
 
 .liste2 {
@@ -305,10 +307,15 @@ hr {
 
 .traduction {
     display: flex;
-    align-items: center;
+    flex-direction:row;
+    height: 39px;
+    overflow: hidden;
     justify-content: space-between;
+    box-sizing: border-box;
 }
-
+.traduction:hover {
+    overflow: visible;
+}
 .traduction img {
     width: 40px;
     padding: 5px;
@@ -326,8 +333,6 @@ hr {
 .traduction img:active {
     transform: scale(1.2);
 }
-
-
 /*===============================header=======================================*/
 /*===============================body=======================================*/
 body {
@@ -434,6 +439,10 @@ h3 {
     flex-direction: column;
     align-items: center;
 }
+.parcours_type {
+    display: flex;
+    flex-direction: column;
+}
 
 .parcours_éspace {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 9px;
@@ -449,7 +458,20 @@ h3 {
     height: 230px;
     cursor: pointer;
 }
-
+.sesame_exp {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 201;
+}
 .boite_explication {
     margin-left: 15px;
 }
@@ -512,7 +534,9 @@ summary {
     padding: 0px;
     margin: 0px;
     font-size: 17px;
-    color: rgb(4,58,100);
+    color: rgb(30, 114, 178);
+    font-weight: bold;
+    animation: bounceIn 5s linear infinite;
 }
 
 #sesame:hover {
@@ -526,7 +550,61 @@ summary {
     color: green;
     background-color: rgb(230, 230, 230);
 }
+.sesame_explication {
+    box-sizing: border-box;
+    width: 600px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 8px 10px 10px 9px rgb(0, 0, 0, 0.1);
+    border-radius: 14px;
 
+}
+.sesame_explication img {
+    height: 100%;
+    width: 50%;
+    padding: 10px;
+    border-radius: 14px;
+}
+.sesame_texte {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 20px;
+    line-height: 2;
+}
+.sesame_texte img {
+    height: 30%;
+    margin-bottom: 13px;
+}
+.sesame_texte p {
+    margin-bottom: 10px;
+}
+.sesame_texte h5 {
+    text-align: center;
+    font-size: 15px;
+}
+.adresse_sesame {
+    box-sizing: border-box;
+    border-radius: 14px;
+    color: rgb(0, 41, 80);
+    display: flex;
+    margin-top: 2px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(4,58,100);
+}
+.adresse_sesame:hover {
+    color: #fff;
+    background-color: rgb(0, 41, 80);
+    transition: 0.4s ease-in;
+    transform: scale(1.04);
+}
+.adresse_sesame:active {
+    transform: scale(0.9);
+}
+.a1 {
+    text-decoration: none;
+}
 .qualparc {
     display: flex;
     align-items: center;
@@ -738,15 +816,56 @@ h3 {
 }
 .qualite_type:hover {
     cursor: pointer;
-    background-color: rgb(45, 2, 109);
+    background-color: #fff;
     border: 2px solid rgb(4,59, 109);
+    color: rgb(4,59, 109);
+    transition: 0.2s ease-out;
 }
 .qualite_type:active{
     background-color: rgb(4,58,108);
     color: #fff;
     transform: scale(0.99);
     border: 2px solid #fff;
+    transition: 0.3s ease-out;
     
+}
+
+.personne-serieuse {
+    width: 600px;
+    color: #1a237e; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    border: 4px solid rgb(4, 58, 109);
+    display: none;
+    position: fixed;
+    margin: 20px auto;
+    text-align: justify; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow:100% rgba(0, 0, 0, 0.8);
+    z-index: 201;
+}
+
+.personne-serieuse h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.personne-serieuse ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+.personne-serieuse ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.personne-serieuse ul li strong {
+    color: rgb(4,59, 109); 
 }
 /*=======================================Pieds de la page=============================*/
 footer {
@@ -809,31 +928,24 @@ footer img {
 
 .div2 {
     text-align: center;
-    /* Pour centrer le titre "Passions" */
+
 }
 
 .passion_images {
     margin-top: -9px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 2 colonnes de largeur égale */
     grid-gap: 10px;
-    font-size: 15px;
-    /* Espacement entre les éléments */
     justify-items: centerer;
-    /* Centrer les éléments dans les colonnes */
 }
 
 .passion_images > div {
     text-align: center;
-    /* Centrer le contenu des div enfants */
 }
 
 .passe_temps {
     width: 30px;
-    /* Largeur des images */
     height: 30px;
-    /* Hauteur des images */
     border-radius: 9px;
     background-color: #fff;
 }
